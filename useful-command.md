@@ -17,14 +17,22 @@ Router(config-line)#logging synchronous
 Router(config-line)#exit
 Router(config)#no ip domain-lookup
 ```
----
 
 ### 2. #write memory
 - running-config を startup-config に保存
 - copy running-config startup-config の代替コマンド
 
----
 
 ### 3. Router(config-if)#no shutdown
 - router設定時、interface活性化のためのコマンド
 - ip address設定後忘れずコマンドする、しないと通信不可
+
+
+### 4. Router設定後の結果が確認したい時
+
+```
+Rl#show ip interface brief
+Interface              IP-Address      OK? Method Status  Protocol
+FastEthernet0/0        192.168.1.1     YES manual up      up
+FastEthernet0/1        192.168.1.33    YES manual up      up
+```
