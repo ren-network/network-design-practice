@@ -1,5 +1,3 @@
-## 利便機能
-
 ### 1-1. logging synchronous
 - コンソール操作中にログ出力で入力行が乱れるのを防止
 - 入力作業の可読性・操作性向上
@@ -19,9 +17,14 @@ Router(config-line)#logging synchronous
 Router(config-line)#exit
 Router(config)#no ip domain-lookup
 ```
-
 ---
 
 ### 2. #write memory
 - running-config を startup-config に保存
 - copy running-config startup-config の代替コマンド
+
+---
+
+### 3. Router(config-if)#no shutdown
+- router設定時、interface活性化のためのコマンド
+- ip address設定後忘れずコマンドする、しないと通信不可
